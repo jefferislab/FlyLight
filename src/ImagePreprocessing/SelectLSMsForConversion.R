@@ -7,7 +7,7 @@ if(!exists('jfconfig')){
 }
 
 lsms=dir(jfconfig$dumpdir,patt="\\.lsm$",recursive=TRUE)
-lsmtoconvertdir=file.path(jfconfig$regroot,"lsmstoconvert"),
+lsmtoconvertdir=file.path(jfconfig$regroot,"lsmstoconvert")
 
 for(lsm in lsms){
 	stem=sub("\\.lsm","",basename(lsm))
