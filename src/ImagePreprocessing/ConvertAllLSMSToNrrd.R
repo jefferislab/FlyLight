@@ -41,7 +41,7 @@ convertlsmstonrrd<-function(
 	for(i in seq(along=lsmstoconvert)){
 		f=lsmstoconvert[i]
 		cmd=runFijiMacro(
-			macro=path.expand("~/projects/CommonCode/ImageJMacros/BatchConvertLSMsToPICs.txt"),
+			macro=file.path(jfconfig$srcdir,'ImagePreprocessing','lsmtonrrd.txt'),
 			macroArg=paste(f, rawnrrdsdir, 'nrrd',sep=","),
 			# javaArgs="-noverify",
 			headless=TRUE, DryRun=TRUE,
