@@ -6,6 +6,7 @@ jfconfig$rootdir=dirname(jfconfig$srcdir)
 jfconfig$regroot=file.path(jfconfig$rootdir,'FLReg')
 jfconfig$dbdir=file.path(jfconfig$rootdir,'db')
 jfconfig$FunctionFiles=list.files(jfconfig$srcdir,patt="Functions",full=T,recurs=T)
+jfconfig$dumpdir=file.path(jfconfig$rootdir,'dump')
 
 for (MyPath in jfconfig$FunctionFiles) {
 	try(source(MyPath))
