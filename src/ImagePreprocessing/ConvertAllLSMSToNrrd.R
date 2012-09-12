@@ -45,7 +45,7 @@ convertlsmstonrrd<-function(
 			macroArg=paste(f, rawnrrdsdir, 'nrrd',sep=","),
 			# javaArgs="-noverify",
 			headless=TRUE, DryRun=TRUE,
-			fijiPath=path.expand("~/dev/ij/fiji/fiji"))
+			fijiPath=path.expand("~/dev/ij/fiji.2011/fiji"))
 		gene_name=sub("\\.lsm","",basename(f))
 		nrrds=file.path(rawnrrdsdir,paste(gene_name,"_0",1:2,".nrrd",sep=""))
 		# either run cmd, or say what would have happened
