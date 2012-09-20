@@ -12,8 +12,8 @@ jfrc2csv=file.path(jfconfig$dbdir,"jfrc2_BackgroundParams.csv")
 jfrc2histo=file.path(jfconfig$regroot,"reformatted.histo")
 if(file.exists(jfrc2csv)){
 	jfrc2df=read.csv(jfrc2csv,stringsAsFactors=FALSE)
-	jfrc2df=UpdateOrCalculateBackgroundParams(jfrc2histo,jfrc2df)
-} else jfrc2df=UpdateOrCalculateBackgroundParams(jfrc2histo)
+	jfrc2df=UpdateOrCalculateBackgroundParams(jfrc2histo,jfrc2df,filestems=jfimagestem_forfile)
+} else jfrc2df=UpdateOrCalculateBackgroundParams(jfrc2histo,filestems=jfimagestem_forfile)
 
 # write out table if it has changed
 if(isTRUE(attr(jfrc2df,"changed")))
