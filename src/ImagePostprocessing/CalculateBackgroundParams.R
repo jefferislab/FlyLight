@@ -15,5 +15,6 @@ if(file.exists(jfrc2csv)){
 	jfrc2df=UpdateOrCalculateBackgroundParams(jfrc2histo,jfrc2df)
 } else jfrc2df=UpdateOrCalculateBackgroundParams(jfrc2histo)
 
-if(!isTRUE(attr(jfrc2df,"changed")==FALSE))
+# write out table if it has changed
+if(isTRUE(attr(jfrc2df,"changed")))
 	write.csv(jfrc2df,file=jfrc2csv,row.names=FALSE)
