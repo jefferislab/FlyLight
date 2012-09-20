@@ -17,4 +17,4 @@ if(file.exists(jfrc2bparams_path)){
 
 # write out table if it has changed
 if(isTRUE(attr(jfrc2bparams,"changed")))
-	save(jfrc2bparams,file=jfrc2bparams_path,row.names=FALSE)
+	save(jfrc2bparams,file=jfrc2bparams_path)
