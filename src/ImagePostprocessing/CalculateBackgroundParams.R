@@ -1,3 +1,12 @@
+# Calculate background parameters for neuron (green) images based on
+# nrrd format histograms of reformatted images
+# Depends on CalculateHistograms.R
+
+if(!exists('jfconfig')){
+	source(path.expand("~/projects/AnalysisSuite/R/Code/Startup.R"),keep.source=T)
+	source("~/projects/JFRC/FlyLight/src/JFStartup.R",keep.source=T)
+}
+
 cat("Calculating background parameters for Brain images ...")
 jfrc2csv=file.path(jfconfig$dbdir,"jfrc2_BackgroundParams.csv")
 jfrc2histo=file.path(jfconfig$regdir,"reformatted.histo")
