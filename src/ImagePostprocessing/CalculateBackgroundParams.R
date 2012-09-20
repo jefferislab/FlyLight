@@ -9,7 +9,7 @@ if(!exists('jfconfig')){
 
 cat("Calculating background parameters for Brain images ...")
 jfrc2csv=file.path(jfconfig$dbdir,"jfrc2_BackgroundParams.csv")
-jfrc2histo=file.path(jfconfig$regdir,"reformatted.histo")
+jfrc2histo=file.path(jfconfig$regroot,"reformatted.histo")
 if(file.exists(jfrc2csv)){
 	jfrc2df=read.csv(jfrc2csv,stringsAsFactors=FALSE)
 	jfrc2df=UpdateOrCalculateBackgroundParams(jfrc2histo,jfrc2df)
