@@ -23,7 +23,7 @@ ff=sample(dir(indir,patt='_02_.*\\.nrrd$',full=TRUE))
 errfiles=vector(mode='character')
 for(i in seq(ff)){
 	outfile=file.path(outdir,basename(ff[i]))
-	shouldrun=RunCmdForNewerInput(NA,infiles=ff[i],outfiles=outfile))
+	shouldrun=RunCmdForNewerInput(NA,infiles=ff[i],outfiles=outfile)
 	if(!isTRUE(shouldrun)) {
 		cat(".")
 		next
