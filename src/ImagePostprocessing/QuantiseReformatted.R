@@ -36,7 +36,7 @@ QuantiseAllNrrds<-function(indir,outdir=paste(indir,"-quant",sep=""),paramdf,pat
 load(file.path(jfconfig$dbdir,"jfrc2bparams.rda"))
 
 # 4xd - could be useful for skeletonization
-QuantiseAllNrrds(file.path(jconfig$regroot,"reformatted"),
-	outdir=file.path(jconfig$regroot,"reformatted-quant"),
+QuantiseAllNrrds(file.path(jfconfig$regroot,"reformatted"),
+	outdir=file.path(jfconfig$regroot,"reformatted-quant"),
 	paramdf=jfrc2bparams)
  
