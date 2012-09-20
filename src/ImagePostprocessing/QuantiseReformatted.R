@@ -13,8 +13,7 @@ QuantiseAllNrrds<-function(indir,outdir=paste(indir,"-quant",sep=""),paramdf,pat
 		outfile=file.path(outdir,infile)
 		# Make nrrd default output even if input is nhdr
 		outfile=sub("nhdr$","nrrd",outfile)
-		# nb need Aggressive to prevent matched against mask file
-		s=subset(paramdf,filestem==jfimagestem_forfile)
+		s=subset(paramdf,filestem==jfimagestem_forfile(infile))
 		if(nrow(s)>1) {
 			warning("multiple parameter matches for infile: ",infile)
 			next

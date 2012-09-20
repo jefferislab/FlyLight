@@ -12,8 +12,7 @@ ResampleAndSmoothAllNrrds<-function(indir,outdir=paste(indir,"-smooth",sep=""),
 	cat("Resampling and smoothing",length(infiles),":\n")
 	for(infile in infiles){
 		outfile=file.path(outdir,infile)
-		# nb need Aggressive to prevent matched against mask file
-		s=subset(paramdf,filestem==(infile,Aggressive=TRUE))
+		s=subset(paramdf,filestem==jfimagestem_forfile(infile))
 		if(nrow(s)>1) {
 			warning("multiple parameter matches for infile: ",infile)
 			next
