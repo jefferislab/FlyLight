@@ -1,5 +1,10 @@
 # Smooth and Quantise Refomatted Images
 
+if(!exists('jfconfig')){
+	source(path.expand("~/projects/AnalysisSuite/R/Code/Startup.R"),keep.source=T)
+	source("~/projects/JFRC/FlyLight/src/JFStartup.R",keep.source=T)
+}
+
 ResampleAndSmoothAllNrrds<-function(indir,outdir=paste(indir,"-smooth",sep=""),
 	paramdf,patt="nrrd$",...)
 {

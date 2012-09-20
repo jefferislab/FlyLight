@@ -1,3 +1,8 @@
+if(!exists('jfconfig')){
+	source(path.expand("~/projects/AnalysisSuite/R/Code/Startup.R"),keep.source=T)
+	source("~/projects/JFRC/FlyLight/src/JFStartup.R",keep.source=T)
+}
+
 # Take precomputed background statistics and make new images which fill a given
 # range by linearly scaling old values from threshold (=>0) to oldmax (=>2^bits-1)
 QuantiseAllNrrds<-function(indir,outdir=paste(indir,"-quant",sep=""),paramdf,patt="nrrd$",bits=8)
