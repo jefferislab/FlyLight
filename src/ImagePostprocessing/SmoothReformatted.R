@@ -32,6 +32,6 @@ load(jfrc2bparams_path)
 
 # 4xd - could be useful for skeletonization
 ResampleAndSmoothAllNrrds(file.path(jconfig$regroot,"reformatted"),
-	outdir=file.path(jconfig$regroot,"reformatted-4xd-smooth"),
+	outdir=file.path(jconfig$regroot,"reformatted-4xd-quantsmooth"),
 	paramdf=jfrc2bparams,
 	scalefactor="x0.5 x0.5 =",sigma=0.6)
