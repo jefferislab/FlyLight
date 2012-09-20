@@ -28,8 +28,8 @@ for(i in seq(ff)){
 		cat(".")
 		next
 	}
-	# we should overwrite if RunCmdForNewerInput returned TRUE
-	t=try(ReadHistogramFromNrrd(ff[i],Overwrite=TRUE))
+	# NB NrrdHisto always overwrites
+	t=try(NrrdHisto(ff[i],outfile,min=1,max=4095))
 	if(inherits(t,'try-error')){
 		errfiles=c(errfiles,ff[i])
 		cat("x")
