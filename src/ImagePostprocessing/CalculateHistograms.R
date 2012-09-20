@@ -7,6 +7,11 @@
 # Next step would be to calculate background parameters and then use this 
 # information to quantise images (probably downsampling as well.)
 
+if(!exists('jfconfig')){
+	source(path.expand("~/projects/AnalysisSuite/R/Code/Startup.R"),keep.source=T)
+	source("~/projects/JFRC/FlyLight/src/JFStartup.R",keep.source=T)
+}
+
 # nb use sample to randomise order
 indir=file.path(jfconfig$regroot,'reformatted')
 outdir=paste(indir,sep=".",'histo')
