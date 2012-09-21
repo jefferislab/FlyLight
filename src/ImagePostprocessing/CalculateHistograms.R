@@ -19,6 +19,8 @@ outdir=paste(indir,sep=".",'histo')
 if(!file.exists(outdir)) dir.create(outdir)
 ff=sample(dir(indir,patt='_02_.*\\.nrrd$',full=TRUE))
 
+jfrc2mask=file.path(jfconfig$regroot,'refbrain','JFRC2_HuangNeuropil.nrrd')
+
 # pb=txtProgressBar(min=0,max=length(ff),style=3)
 errfiles=vector(mode='character')
 for(i in seq(ff)){
@@ -29,7 +31,7 @@ for(i in seq(ff)){
 		next
 	}
 	# NB NrrdHisto always overwrites
-	t=try(NrrdHisto(ff[i],outfile,min=1,max=4095))
+	t=try(NrrdHisto(ff[i],outfile,maskfile=jfrc2mask,min=1,max=4095))
 	if(inherits(t,'try-error')){
 		errfiles=c(errfiles,ff[i])
 		cat("x")
