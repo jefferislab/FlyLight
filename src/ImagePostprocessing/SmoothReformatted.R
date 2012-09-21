@@ -34,8 +34,8 @@ ResampleAndSmoothAllNrrds<-function(indir,outdir=paste(indir,"-smooth",sep=""),
 jfrc2bparams_path=file.path(jfconfig$dbdir,"jfrc2bparams.rda")
 load(jfrc2bparams_path)
 
-# 4xd - could be useful for skeletonization
+# 8xd - could be useful for skeletonization
 ResampleAndSmoothAllNrrds(file.path(jfconfig$regroot,"reformatted"),
-	outdir=file.path(jfconfig$regroot,"reformatted-4xd-quantsmooth"),
+	outdir=file.path(jfconfig$regroot,"reformatted-8xd-quantsmooth"),
 	paramdf=jfrc2bparams,
-	scalefactor="x0.5 x0.5 =",sigma=0.6)
+	scalefactor="x0.5 x0.5 x0.5",sigma=0.6,out_type='uint8')
