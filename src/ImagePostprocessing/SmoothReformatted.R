@@ -38,4 +38,4 @@ load(jfrc2bparams_path)
 ResampleAndSmoothAllNrrds(file.path(jfconfig$regroot,"reformatted"),
 	outdir=file.path(jfconfig$regroot,"reformatted-8xd-quantsmooth"),
 	paramdf=jfrc2bparams,
-	scalefactor="x0.5 x0.5 x0.5",sigma=0.6,out_type='uint8',newmax=255)
+	scalefactor="x0.5 x0.5 x0.5",sigma=0.6,out_type='uint8')
