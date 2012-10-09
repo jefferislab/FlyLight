@@ -18,4 +18,4 @@ source(path.expand("~/projects/AnalysisSuite/R/Code/Startup.R"))
 infiles=sample(dir(indir,patt=regex,full=TRUE))
 outfiles=file.path(outdir,sub("nrrd$","png",basename(infiles)))
 
-mapply(NrrdProject,infiles,outfiles,MoreArgs=list(axis=axis,UseLock=TRUE))
+mapply(NrrdProject,infiles,outfiles,MoreArgs=list(axis=axis,UseLock=TRUE,scale="x1 x1"))

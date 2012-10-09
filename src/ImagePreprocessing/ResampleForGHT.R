@@ -1,6 +1,8 @@
 # Calculating Generalised Hough Transform on GJAC from SMB share is v slow
 # precalculate small images
 
+# zibamira -opt -no_gui -logfile /dev/null -tclcmd 'source src/import.hx; Python exec {ght.processDir(root="/Users/jefferis/projects/JFRC/FlyLight/FLReg", refbrainsurf="refbrain/JFRCtemplate-cal_01.surf",imagesdir='images4um')}'
+
 if(!exists('jfconfig')){
 	source(path.expand("~/projects/AnalysisSuite/R/Code/Startup.R"),keep.source=T)
 	source("~/projects/JFRC/FlyLight/src/JFStartup.R",keep.source=T)
