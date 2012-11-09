@@ -25,3 +25,16 @@ jfimagestem_forfile<-function(file,checkExists=FALSE){
 	}
 	jfi
 }
+#' Return a shortened (but unique) janelia image name for a path
+#'
+#' NB Does not include file extension
+#' @param file Path to file(s) to test
+#' @param checkExists Check that calculated image stem exists (TODO)
+#' @return Character vector of image names (or NA if checkExists fails)
+#' @export
+#' @seealso \code{\link{fc_gene_name}}
+jfshortname_forfile<-function(file,checkExists=FALSE){
+	image_stem=jfimagestem_forfile(file,checkExists=checkExists)
+	uniquebit=sub("GMR_([^\\-]+).*","\\1",image_stem)
+	gsub("_","",uniquebit)
+}
