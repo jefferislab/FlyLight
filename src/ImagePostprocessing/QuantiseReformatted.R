@@ -38,5 +38,5 @@ load(file.path(jfconfig$dbdir,"jfrc2bparams.rda"))
 # 4xd - could be useful for skeletonization
 QuantiseAllNrrds(file.path(jfconfig$regroot,"reformatted"),
 	outdir=file.path(jfconfig$regroot,"reformatted-quant"),
-	paramdf=jfrc2bparams)
+	paramdf=jfrc2bparams,patt='_02_warp.*\\.nrrd$')
  
