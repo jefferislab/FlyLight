@@ -26,3 +26,13 @@ jfimagestem_forfile<-function(file,checkExists=FALSE){
 	}
 	jfi
 }
+
+#' Return the GMR code (ie plate row column) for a file
+#'
+#' @param f one or more paths
+#' @return character vector GMR code
+#' @export
+#' @seealso \code{\link{jfimagestem_forfile}}
+gmr_forfile<-function(f){
+	sub("GMR_([^_]+)_.*","\\1",jfimagestem_forfile(f))
+}
