@@ -1,3 +1,5 @@
+#!/usr/bin/env Rscript
+
 # Script to go through all lsms and find metadata using 
 # LOCI bioformats showinf command line tool
 # will update database when finished
