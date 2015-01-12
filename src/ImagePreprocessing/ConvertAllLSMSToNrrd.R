@@ -1,7 +1,6 @@
 # script to be run on hex to convert all LSM files to nrrds
-
+library(nat.as)
 if(!exists('jfconfig')){
-	source(path.expand("~/projects/AnalysisSuite/R/Code/Startup.R"),keep.source=T)
 	source("~/projects/JFRC/FlyLight/src/JFStartup.R",keep.source=T)
 }
 source("~/projects/CommonCode/Rscripts/ImageProcessingFunctions.R")
