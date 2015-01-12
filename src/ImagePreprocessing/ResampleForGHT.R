@@ -10,11 +10,11 @@ if(!exists('jfconfig')){
 
 # would have been images, but since flylight images seem well behaved, we
 # can do it for all raw nrrds
-ff=dir(file.path(jfconfig$regroot,'rawnrrds'),full=T,patt="_01\\.nrrd$")
+ff=dir(file.path(jfconfig$regroot,'rawnrrds.v'),full=T,patt="_01\\.nrrd$")
 # gene_names
 names(ff)=sub("_01.nrrd","",fixed=T,basename(ff))
 
-outdir=file.path(jfconfig$regroot,'images4um')
+outdir=file.path(jfconfig$regroot,'images4um.v')
 if(!exists(outdir)) dir.create(outdir)
 
 for(f in sample(ff)){

@@ -27,8 +27,8 @@ source("~/projects/CommonCode/Rscripts/ImageProcessingFunctions.R")
 #' @export
 #' @seealso \code{\link{runFijiMacro}}, \code{\link{RunCmdForNewerInput}}
 convertlsmstonrrd<-function(
-	lsmstoconvertdir=file.path(jfconfig$regroot,"lsmstoconvert"),
-	rawnrrdsdir=file.path(jfconfig$regroot,"rawnrrds"),
+	lsmstoconvertdir=file.path(jfconfig$regroot,"lsmstoconvert.v"),
+	rawnrrdsdir=file.path(jfconfig$regroot,"rawnrrds.v"),
 	RandomOrder=TRUE,DryRun=TRUE,Verbose=!DryRun){
 
 	if(!file.exists(rawnrrdsdir)) dir.create(rawnrrdsdir)

@@ -13,7 +13,7 @@ if(!exists("fcconfig")) {
 jfconfig$showinf='/lmb/home/jefferis/dev/ij/fiji.old/modules/bio-formats.setaside/tools/showinf'
 
 #debug(makeLSMdf)
-lsmdir=file.path(jfconfig$regroot,"lsmstoconvert")
+lsmdir=file.path(jfconfig$regroot,"lsmstoconvert.v")
 for(f in dir(lsmdir,patt="lsm$",full=T)) extractLociLSMMetadata(f,UseLock=TRUE,showinf=jfconfig$showinf)
 
 # Only actually make summary dataframe if something has changed

@@ -6,8 +6,8 @@ if(!exists('jfconfig')){
 	source("~/projects/JFRC/FlyLight/src/JFStartup.R",keep.source=T)
 }
 
-lsms=dir(jfconfig$dumpdir,patt="\\.lsm$",recursive=TRUE,full=T)
-lsmtoconvertdir=file.path(jfconfig$regroot,"lsmstoconvert")
+lsms=dir(jfconfig$dumpdir,patt=".*-fA01v.*\\.lsm$",recursive=TRUE,full=T)
+lsmtoconvertdir=file.path(jfconfig$regroot,"lsmstoconvert.v.v")
 
 for(lsm in lsms){
 	stem=sub("\\.lsm","",basename(lsm))
