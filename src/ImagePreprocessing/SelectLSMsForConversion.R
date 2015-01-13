@@ -1,8 +1,7 @@
 # for the time being, symlink all lsms in dump directory
 # in future consider processing VNCs/Brains separately
-
+library(nat.as)
 if(!exists('jfconfig')){
-	source(path.expand("~/projects/AnalysisSuite/R/Code/Startup.R"),keep.source=T)
 	source("~/projects/JFRC/FlyLight/src/JFStartup.R",keep.source=T)
 }
 

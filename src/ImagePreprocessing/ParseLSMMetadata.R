@@ -5,9 +5,9 @@
 # will update database when finished
 
 # To allow running direct from command line
+library(nat.as)
 if(!exists("fcconfig")) {
 	source("~/projects/ChiangReanalysis/src/FlyCircuitStartup.R",keep.source=T)
-	source("~/projects/AnalysisSuite/R/Code/Startup.R",keep.source=T)
 	source("~/projects/JFRC/FlyLight/src/JFStartup.R",keep.source=T)
 }
 jfconfig$showinf='/lmb/home/jefferis/dev/ij/fiji.old/modules/bio-formats.setaside/tools/showinf'
