@@ -95,6 +95,7 @@ make_vnc_reg<-function(x, UseLock=F) {
 # library(plyr)
 # l_ply(sample(images), make_vnc_reg, .progress='text')
 
+library(plyr)
 library(doMC)
 registerDoMC(10)
 l_ply(images, make_vnc_reg, .parallel=TRUE)
