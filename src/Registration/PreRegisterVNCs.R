@@ -1,3 +1,5 @@
+#!/usr/bin/env Rscript
+
 # script to register VNCs using a home-made principal components rule
 # By default runs with 10 parallel processes using plyr/doMC (suitable for hex)
 
