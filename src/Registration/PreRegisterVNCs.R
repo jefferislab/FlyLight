@@ -78,7 +78,7 @@ rotate_vnc <- function(image_file, threshold=500, transform=TRUE, centre=c('cent
 
 # construct name of output registration from input image
 image_to_registration <- function(image) {
-	registration <- gsub("images4um.v/", "Registration/affine/VNCIS14um_", image)
+	registration <- gsub("images4um.v/", "Registration.v/affine/VNCIS1_", image)
 	registration <- gsub(".nrrd", "_ght.list", registration)
 	registration
 }
