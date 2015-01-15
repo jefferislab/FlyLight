@@ -3,8 +3,8 @@
 
 # zibamira -opt -no_gui -logfile /dev/null -tclcmd 'source src/import.hx; Python exec {ght.processDir(root="/Users/jefferis/projects/JFRC/FlyLight/FLReg", refbrainsurf="refbrain/JFRCtemplate-cal_01.surf",imagesdir='images4um')}'
 
+library(nat.as)
 if(!exists('jfconfig')){
-	source(path.expand("~/projects/AnalysisSuite/R/Code/Startup.R"),keep.source=T)
 	source("~/projects/JFRC/FlyLight/src/JFStartup.R",keep.source=T)
 }
 
