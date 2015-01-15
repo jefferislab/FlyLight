@@ -27,12 +27,14 @@ rotate_vnc <- function(image_file, threshold=500, transform=TRUE, centre=c('cent
 	if(scales[1]<0) {
 		# set scale factors positive
 		rot_params[3,]=1
-		# if it was negative then need to change z rotation as if flipping along x axis
+		# if it was negative then need to change z rotation
+		# we rotate by a further 180 degrees, which approximates (modulo handedness)
+		# the scale=-1 that would otherwise be applied _after_ the rotation
 		zrot=rot_params[2,3]
-		zrot=180-zrot
+		zrot=zrot+180
 		# need to check that we don't now have zrot>180 which then next snippet
 		# would not expect
-		if(zrot>180) zrot=zrot-180
+		if(zrot>180) zrot=zrot-360
 		rot_params[2,3]=zrot
 	}
 	
@@ -41,7 +43,11 @@ rotate_vnc <- function(image_file, threshold=500, transform=TRUE, centre=c('cent
 	# mounting standard
 	zrot=rot_params[2,3]
 	if(zrot > -45 && zrot < 135) {
-		rot_params[2,] = -rot_params[2,]
+		# turn the VNC round in the opposite direction
+		zrot=zrot-180
+		# fix if we've dropped below -180 (we want things to be in range -180 to +180)
+		if(zrot < -180) zrot=zrot+360
+		rot_params[2,3] = zrot
 		message("inverting rotation for ", image_file)
 	}
 	
